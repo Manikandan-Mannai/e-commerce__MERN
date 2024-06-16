@@ -32,7 +32,7 @@ const Login = () => {
       console.log("Generated OTP:", generatedOTP);
       console.log("Mail:", user.email);
 
-      await fetch("https://backend-arun.onrender.com/api/send-otp", {
+      await fetch("${url}/api/send-otp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

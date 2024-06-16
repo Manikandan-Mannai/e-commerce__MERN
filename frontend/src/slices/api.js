@@ -1,4 +1,4 @@
-export const url = "https://backend-arun.onrender.com/api";
+export const url = "${url}/api";
 
 export const setHeaders = () => {
   const headers = {

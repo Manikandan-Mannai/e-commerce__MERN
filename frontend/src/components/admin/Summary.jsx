@@ -46,7 +46,7 @@ const Summary = () => {
   useEffect(() => {
     async function fetchOrderStats() {
       try {
-        const res = await axios.get(`https://backend-arun.onrender.com/api/orders/stats`, setHeaders());
+        const res = await axios.get(`${url}/api/orders/stats`, setHeaders());
         res.data.sort(compare);
         setOrders(res.data);
         setOrdersPrec((((res.data[1].total - res.data[0].total) / res.data[0].total) * 100));
@@ -60,7 +60,7 @@ const Summary = () => {
   useEffect(() => {
     async function fetchOrderStats() {
       try {
-        const res = await axios.get(`https://backend-arun.onrender.com/api/orders/income/stats`, setHeaders());
+        const res = await axios.get(`${url}/api/orders/income/stats`, setHeaders());
         res.data.sort(compare);
         setIncome(res.data);
         setIncomePrec((((res.data[1].total - res.data[0].total) / res.data[0].total) * 100));

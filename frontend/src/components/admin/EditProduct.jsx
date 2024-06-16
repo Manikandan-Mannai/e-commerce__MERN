@@ -98,10 +98,10 @@ export default function EditProduct({ prodID }) {
     return (
         <div>
             <Edit onClick={handleClickOpen}>Edit</Edit>
-            <Dialog open={open} onClose={handleClose} fullWidth={true} maxWidth={'md'}>
-                <DialogTitle>Edit Product</DialogTitle>
-                <DialogContent>
-                    <StyledEditProduct>
+            <Dialog open={open} onClose={handleClose} fullWidth={true} maxWidth={'md'} >
+                <DialogTitle className="dialog">Edit Product</DialogTitle>
+                <DialogContent className="dialog">
+                    <StyledEditProduct >
                         <StyledForm onSubmit={handleSubmit}>
                             <h3>Edit Product</h3>
                             {/* <input
@@ -181,7 +181,7 @@ export default function EditProduct({ prodID }) {
                         </ImagePreview>
                     </StyledEditProduct>
                 </DialogContent>
-                <DialogActions>
+                <DialogActions className="dialog">
                     <Button onClick={handleClose} color="primary">
                         Cancel
                     </Button>
@@ -206,7 +206,8 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 300px;
-  margin-top: 2rem;
+  margin-top: 2rem; 
+  
 
   select,
   input {

@@ -30,7 +30,7 @@ export const productsCreate = createAsyncThunk(
   async (values) => {
     try {
       const response = await axios.post(
-        `https://backend-arun.onrender.com/api/products`,
+        `${url}/api/products`,
         values,
         setHeaders()
       );
@@ -67,7 +67,7 @@ export const productsDelete = createAsyncThunk(
   async (id) => {
     try {
       const response = await axios.delete(
-        `https://backend-arun.onrender.com/api/products/${id}`,
+        `${url}/api/products/${id}`,
         setHeaders()
       );
       return response.data;
